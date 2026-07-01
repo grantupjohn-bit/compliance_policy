@@ -1,0 +1,47 @@
+{
+  "policy_id": "SEC-HARD-003",
+  "title": "Security Hardening Policy",
+  "category": "Security and Technology",
+  "policy_type": "Technical",
+  "version": "5.0",
+  "status": "Published",
+  "approved_date": "2026-06-19",
+  "next_review_date": "2027-06-27",
+  "owner_role": "Group Chief Information Security Officer",
+  "approver_role": "Chief Executive Officer",
+  "change_scope": "Major",
+  "required_training_roles": "DevOps Engineer, Database Administrator, Security Analyst",
+  "sections": [
+    {
+      "id": "4.5",
+      "heading": "Database Hardening",
+      "text": "Restrict access to databases based on user roles and context in accordance with the Access Control Policy. All database instances must enforce encryption at rest and in transit. Default credentials must be changed immediately upon deployment.",
+      "is_automated": true,
+      "automation_hooks": {
+        "framework": "OPA/Rego",
+        "rule_target": "cloud.database.access_control",
+        "enforcement": "block_deployment"
+      }
+    },
+    {
+      "id": "4.6",
+      "heading": "Network Segmentation",
+      "text": "All production environments must be segmented from development and staging networks. Firewall rules must follow least-privilege principles and be reviewed quarterly.",
+      "is_automated": true,
+      "automation_hooks": {
+        "framework": "Terraform/Sentinel",
+        "rule_target": "cloud.network.segmentation",
+        "enforcement": "warn_and_log"
+      }
+    },
+    {
+      "id": "5.0",
+      "heading": "Unacceptable Behaviour",
+      "text": "Unacceptable behaviour includes failing to conduct proper audits, bypassing automated configuration processes, sharing credentials, and disabling security controls without authorization.",
+      "is_automated": false,
+      "human_instructions": "Review daily log configurations quarterly during regular team audits. Document all exceptions in the risk register."
+    }
+  ],
+  "version_history": [],
+  "committed_at": "2026-07-01T00:25:40.444Z"
+}
