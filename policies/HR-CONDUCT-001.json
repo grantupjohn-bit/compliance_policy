@@ -1,0 +1,39 @@
+{
+  "policy_id": "HR-CONDUCT-001",
+  "title": "Code of Conduct Policy",
+  "category": "Human Resources",
+  "policy_type": "Administrative",
+  "version": "3.2",
+  "status": "Published",
+  "approved_date": "2025-11-15",
+  "next_review_date": "2026-11-15",
+  "owner_role": "Chief Human Resources Officer",
+  "approver_role": "Chief Executive Officer",
+  "change_scope": "Minor",
+  "required_training_roles": "All Staff",
+  "sections": [
+    {
+      "id": "1.0",
+      "heading": "Purpose and Scope",
+      "text": "This policy establishes the minimum standards of professional conduct expected of all employees, contractors, and temporary staff engaged by the organization.",
+      "is_automated": false,
+      "human_instructions": "All new employees must acknowledge this policy during onboarding within 5 business days."
+    },
+    {
+      "id": "2.0",
+      "heading": "Professional Standards",
+      "text": "All personnel must conduct themselves with integrity, honesty, and professionalism in all business dealings. Conflicts of interest must be disclosed immediately to the compliance officer.",
+      "is_automated": false,
+      "human_instructions": "Annual declaration of interests required by December 31 each year."
+    },
+    {
+      "id": "3.0",
+      "heading": "Anti-Harassment",
+      "text": "The organization maintains zero tolerance for harassment, discrimination, or bullying of any kind. All reports will be investigated promptly and confidentially.",
+      "is_automated": false,
+      "human_instructions": "Report incidents through the confidential hotline or directly to HR."
+    }
+  ],
+  "version_history": [],
+  "committed_at": "2026-07-01T00:25:41.221Z"
+}
