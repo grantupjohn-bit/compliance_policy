@@ -1,0 +1,47 @@
+{
+  "policy_id": "DP-PRIV-002",
+  "title": "Data Privacy and Protection Policy",
+  "category": "Data Privacy",
+  "policy_type": "Regulatory",
+  "version": "4.1",
+  "status": "Published",
+  "approved_date": "2026-03-01",
+  "next_review_date": "2026-09-01",
+  "owner_role": "Data Protection Officer",
+  "approver_role": "Chief Executive Officer",
+  "change_scope": "Major",
+  "required_training_roles": "Data Engineer, Software Developer, DevOps Engineer",
+  "sections": [
+    {
+      "id": "1.0",
+      "heading": "Data Classification",
+      "text": "All data assets must be classified according to the four-tier classification scheme: Public, Internal, Confidential, and Restricted. Classification determines the applicable security controls.",
+      "is_automated": true,
+      "automation_hooks": {
+        "framework": "AWS Config Rules",
+        "rule_target": "data.classification.tagging",
+        "enforcement": "alert_and_remediate"
+      }
+    },
+    {
+      "id": "2.0",
+      "heading": "Data Retention",
+      "text": "Personal data must not be retained beyond the specified retention period unless required by law. Automated deletion workflows must be implemented for all data stores containing PII.",
+      "is_automated": true,
+      "automation_hooks": {
+        "framework": "Custom Lambda",
+        "rule_target": "data.retention.pii_cleanup",
+        "enforcement": "auto_delete"
+      }
+    },
+    {
+      "id": "3.0",
+      "heading": "Subject Access Requests",
+      "text": "All data subject access requests must be acknowledged within 48 hours and fulfilled within 30 calendar days as required by applicable privacy legislation.",
+      "is_automated": false,
+      "human_instructions": "Route all SARs through the DPO office. Track in the SAR register."
+    }
+  ],
+  "version_history": [],
+  "committed_at": "2026-07-01T00:25:41.902Z"
+}
